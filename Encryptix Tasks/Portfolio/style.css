@@ -1,14 +1,19 @@
 body{
-    font-family: "Lora", serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     line-height: 1.6;
     background-color: #f4f4f4;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header{
-    background: linear-gradient(to bottom right, rgb(139, 15, 185), rgb(63, 63, 243));
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
     color: #fff;
     height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     text-align: center;
 }
@@ -17,44 +22,100 @@ header h2 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: 600;
+    animation: slideInLeft 1.5s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 header p {
     font-size: 1.2rem;
     font-weight: 400;
+    animation: slideInRight 1.5s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .intro{
     padding: 2rem 0;
     border-radius: 8px;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 2s ease;
+    margin: 2rem auto;
+
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 section h2{
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 2rem 0 1rem;
     font-size: 2rem;
     color: rgb(139, 15, 185);
+    animation: fadeInUp 1s ease;
 }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .intro img{
     width: 180px; 
     display: block;
-    margin: 0.5rem auto;
+    margin: 1rem auto;
     border-radius: 50%;
-    border: 4px solid rgb(139, 15, 185);
+    border: 4px solid #6a11cb;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+.intro img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .intro p {
-    text-align: center;
     font-size: 1.1rem;
     line-height: 1.8;
-    padding: 0 3rem;
+    padding: 0 2rem;
 }
 
 .skills ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    animation: fadeIn 1s ease;
 }
 
 .skills ul li {
@@ -63,14 +124,21 @@ section h2{
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    background-color: rgb(139, 15, 185);
+    background-color: #6a11cb;
     color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skills ul li:hover {
+    background-color: #6a0fab;
+    transform: scale(1.1);
 }
 
 .project {
     margin-bottom: 2rem;
     text-align: center;
     padding: 0 3rem;
+    animation: fadeInUp 1s ease;
 }
 
 .project img{
@@ -79,11 +147,16 @@ section h2{
     margin: 0.5rem auto;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
- h3{
+ .project h3{
     font-size: 1.5rem;
-    color: rgb(63, 63, 243);
+    color: #2575fc;
 }
 
 .project p {
@@ -93,6 +166,7 @@ section h2{
 
 .resume {
     text-align: center;
+    animation: fadeInUp 1s ease;
 }
 
 .resume a {
@@ -103,20 +177,24 @@ section h2{
     border-radius: 5px;
     display: inline-block;
     margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .resume a:hover {
-    background-color: blue;
+    background-color: #0b5ed7;
+    transform: scale(1.05);
 }
 
 .contact p {
     text-align: center;
     font-size: 1.1rem;
+    animation: fadeIn 1s ease;
 }
 
 .contact a {
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease;
 }
 
 .contact a:hover {
