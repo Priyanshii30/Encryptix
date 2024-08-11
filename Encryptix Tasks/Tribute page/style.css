@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+    color: #03396c;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #005b96;
+    color: #e0f7fa;
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+header p {
+    font-style: italic;
+    margin: 20px 0 0;
+    font-size: 1.5em;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #b3cde0;
+    box-shadow: 0 0 20px rgba(0, 91, 150, 0.5);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#about img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #03396c;
+    border-bottom: 2px solid #03396c;
+    padding-bottom: 10px;
+    animation: slideInFromBottom 1s ease-in-out;
+}
+
+@keyframes slideInFromBottom {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #005b96;
+    color: #e0f7fa;
+    border-top: 2px solid #03396c;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #about img {
+        width: 90%;
+    }
+}
