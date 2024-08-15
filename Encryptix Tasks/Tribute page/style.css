@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0f7fa;
+    background-color: #bfdbf3;
     color: #03396c;
     overflow-x: hidden;
 }
@@ -25,17 +25,15 @@ header h1 {
     font-size: 3em;
     animation: slideInFromLeft 1s ease-in-out;
 }
+header h3 {
+    margin: 20px 0 0;
+    font-size: 2em;
+    animation: slideInFromRight 2s ease-in-out;
+}
 
 @keyframes slideInFromLeft {
     from { transform: translateX(-100%); }
     to { transform: translateX(0); }
-}
-
-header p {
-    font-style: italic;
-    margin: 20px 0 0;
-    font-size: 1.5em;
-    animation: slideInFromRight 1s ease-in-out;
 }
 
 @keyframes slideInFromRight {
@@ -43,37 +41,38 @@ header p {
     to { transform: translateX(0); }
 }
 
-section {
-    padding: 40px 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: #b3cde0;
-    box-shadow: 0 0 20px rgba(0, 91, 150, 0.5);
-    border-radius: 10px;
+header p {
+    font-style: italic;
+    margin: 20px 0 0;
+    font-size: 1.5em;
     animation: fadeIn 2s ease-in-out;
 }
 
-#about {
+section {
+    padding: 40px 20px;
+    margin: 50px auto;
+    max-width: 800px;
+    background-color: #dcedf9;
+    box-shadow: 5px 10px 18px rgba(0, 91, 150, 0.5);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: center; 
+    &:hover{
+        transform: scale(1.05);
+        transition: 0.5s ease-in-out;
+    }
 }
 
-#about img {
-    width: 80%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+section img{
+    height: 20rem;
+    width: 30rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
 }
 
-#about img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
 
 h2 {
     color: #03396c;
@@ -87,32 +86,18 @@ h2 {
     to { transform: translateY(0); }
 }
 
-ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-    animation: fadeIn 2s ease-in-out;
-}
-
 footer {
     text-align: center;
     padding: 20px;
     background-color: #005b96;
     color: #e0f7fa;
     border-top: 2px solid #03396c;
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
 }
 
 @media (max-width: 768px) {
     section {
-        margin: 10px;
+        margin: 30px;
         padding: 15px;
-    }
-
-    #about img {
-        width: 90%;
     }
 }
